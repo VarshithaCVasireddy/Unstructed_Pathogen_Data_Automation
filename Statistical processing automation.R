@@ -5,7 +5,7 @@ library(readxl)
 library(psych)
 library(lubridate)
 
-(inp_files <- list.files("inputs", pattern="*.xlsx", full.names=TRUE))
+(inp_files <- list.files("inputs_structured", pattern="*.xlsx", full.names=TRUE))
 #From inputs folder, files with .xlsx pattern are pulled
 
 for (i in 1:length(inp_files)) 
@@ -74,7 +74,7 @@ for (i in 1:length(inp_files))
   
   
   out_name <- sub(".xlsx", sprintf("_%s.csv", "stats_processing"), inp_files[i])
-  out_name <- sub("inputs", "outputs", out_name)
+  out_name <- sub("inputs_structured", "outputs_structured", out_name)
   # csv file is created after executing the file
   
   write.csv(org_data, out_name, row.names = F)

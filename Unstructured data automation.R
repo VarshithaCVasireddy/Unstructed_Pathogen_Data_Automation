@@ -61,7 +61,7 @@ Regions <- Dict$new(
 )
 
 
-pathogens <- c("N1")
+pathogens <- c("N1", "Noro", "Inf A")
 #COVID pathogen values are to be pulled
 
 (inp_files <- list.files("inputs", pattern="*.xls$", full.names=TRUE))
